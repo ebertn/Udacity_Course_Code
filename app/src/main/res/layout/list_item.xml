@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2016 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,9 +11,9 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
-<!-- Layout for a single list item -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+--><!-- Layout for a single list item -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -30,9 +29,10 @@
     <LinearLayout
         android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="88dp"
         android:orientation="vertical"
-        android:paddingLeft="16dp">
+        android:paddingLeft="16dp"
+        android:layout_toRightOf="@id/image">
 
         <TextView
             android:id="@+id/miwok_text_view"
@@ -55,4 +55,13 @@
             android:textColor="@android:color/white"
             tools:text="one" />
     </LinearLayout>
-</LinearLayout>
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"/>
+</RelativeLayout>
